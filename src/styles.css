@@ -1,0 +1,76 @@
+/* styles.css */
+.neon-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 32px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .neon-box:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
+  }
+  
+  .neon-button {
+    background-color: #63b3ed; /* Set button background color to light blue */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 16px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .neon-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease-in-out;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .neon-button:hover::before {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  
+  .neon-button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(99, 179, 237, 0.8);
+  }
+  
+  .rainbow-text {
+    background-image: linear-gradient(to right, #FF0080, #FF8C00, #FFD700, #00FF00, #00FFFF, #0000FF, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: rainbow-text-animation 2s infinite;
+  }
+  
+  @keyframes rainbow-text-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
